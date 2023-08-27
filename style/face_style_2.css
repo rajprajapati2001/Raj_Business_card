@@ -1,0 +1,242 @@
+body.cardface_2 { margin: 0px; padding: 0px; scroll-behavior: smooth;}
+
+.face_card_2 { width: 420px; height: 250px; }
+
+.div_details { width: 200px; height: 125px; margin-left: 5px; background-color: #ffffff8f; margin-top: 5px; border-radius: 12px; padding: 5px; }
+.card_2_icons { width: 20px; height: 20px; padding-left: 4.5px; }
+.list_items { font-family: Rubik-Reg; font-size: 12.5px; padding-left: 5px;}
+.list_items:hover { padding-left: 5px; font-weight: 600; text-shadow: 2px 2px 6px #eaff00; }
+
+.img_style { border-radius: 12px; width: 180px; height: 180px; margin-right: 5px; margin-bottom: 5px; }
+.g_pay_img { background-color: black; margin: 5px; width: 180px; height: 180px; border-radius: 12px;}
+
+.a_img_but_barcode {background-color: #00baf7; border-radius: 5px; width: 30px; height: 30px; margin-left: 5px; margin-right: 5px; padding: 2px;}
+.b_img_but_barcode {background-color: #3efc45; border-radius: 5px; width: 30px; height: 30px; margin-left: 5px; margin-right: 5px; padding: 2px;}
+
+.switch_barcode { width: 365px; height: 40px; margin: 2.5px; filter: drop-shadow(0px 0px 3px #ffffff); }
+
+.pay_font { padding-right: 5px; font-family: monospace; font-size: 15px; }
+.pay_button { margin-left: 25px;  margin-top: 2px; border-radius: 20px; border: 2.5px solid black; background-color: aliceblue; }
+
+.div_barcode { width: 400px; height: 45px; margin-left: 5px; margin-right: 5px; margin-top: 5px; background-color: #ffffff8f; border-radius: 5px; }
+@font-face {
+ font-family: Rubik-Reg;
+ src: url('../font/Rubik-Regular.ttf');
+}
+
+/* GPAY FLIP ENCODING */
+.card {
+ /* Center card on screen (presentation only) */
+ position: absolute;
+ border-radius: 12px;
+ margin: 5px;
+ padding-top: 0px;
+ /* Image will fill half the screen if window <600px wide */
+ width: 180px;
+ height: 180px;
+ background-color: #0000004d;
+ /* Set image to 100% of container to scale down at lower screen widths */
+}
+
+/* Flip animation container, keeps perspective */
+.flip-container {
+ -webkit-perspective: 1000;
+ -moz-perspective: 1000;
+ -ms-perspective: 1000;
+ perspective: 1000;
+}
+
+/* Set animation variables */
+.front, .back {
+ -webkit-animation-duration: 5s;
+ -moz-animation-duration: 5s;
+ -ms-animation-duration: 5s;
+ animation-duration: 5s;
+
+ -webkit-transform-style: preserve-3d;
+ -moz-transform-style: preserve-3d;
+ -ms-transform-style: preserve-3d;
+ transform-style: preserve-3d;
+
+ -webkit-animation-iteration-count: infinite;
+ -moz-animation-iteration-count: infinite;
+ -ms-animation-iteration-count: infinite;
+ animation-iteration-count: infinite;
+
+ -webkit-animation-timing-function: ease;
+ -moz-animation-timing-function: ease;
+ -ms-animation-timing-function: ease;
+ animation-timing-function: ease;
+
+ -webkit-animation-fill-mode: forwards;
+ -moz-animation-fill-mode: forwards;
+ -ms-animation-fill-mode: forwards;
+ animation-fill-mode: forwards;
+}
+
+/* Call the animations for each side of the card */
+.front {
+ -webkit-animation-name: cardFlipFront;
+ -moz-animation-name: cardFlipFront;
+ -ms-animation-name: cardFlipFront;
+ animation-name: cardFlipFront;
+}
+
+.back {
+ -webkit-animation-name: cardFlipBack;
+ -moz-animation-name: cardFlipBack;
+ -ms-animation-name: cardFlipBack;
+ animation-name: cardFlipBack;
+}
+
+/* We have two seperate @keyframe animations for each side of the card so we can get this working in IE */
+
+/* This one animates the front card */
+@keyframes cardFlipFront {
+ 0% {
+   -moz-transform: rotateY(0deg);
+   -ms-transform: rotateY(0deg);
+   transform: rotateY(0deg);
+ }
+ 22.5% {
+   -moz-transform: rotateY(0deg);
+   -ms-transform: rotateY(0deg);
+   transform: rotateY(0deg);
+ }
+ 27.5% {
+   -moz-transform: rotateY(180deg);
+   -ms-transform: rotateY(180deg);
+   transform: rotateY(180deg);
+ }
+ 72.5% {
+   -moz-transform: rotateY(180deg);
+   -ms-transform: rotateY(180deg);
+   transform: rotateY(180deg);
+ }
+ 77.5% {
+   -moz-transform: rotateY(0deg);
+   -o-transform: rotateY(0deg);
+   -ms-transform: rotateY(0deg);
+   transform: rotateY(0deg);
+ }
+ 100% {
+   -moz-transform: rotateY(0deg);
+   -ms-transform: rotateY(0deg);
+   transform: rotateY(0deg);
+ }
+}
+
+/* This one animates the front card in webkit */
+@-webkit-keyframes cardFlipFront {
+ 0% {
+   -webkit-transform: rotateY(0deg);
+   transform: rotateY(0deg);
+ }
+ 22.5% {
+   -webkit-transform: rotateY(0deg);
+   transform: rotateY(0deg);
+ }
+ 27.5% {
+   -webkit-transform: rotateY(180deg);
+   transform: rotateY(180deg);
+ }
+ 72.5% {
+   -webkit-transform: rotateY(180deg);
+   transform: rotateY(180deg);
+ }
+ 77.5% {
+   -webkit-transform: rotateY(0deg);
+   transform: rotateY(0deg);
+ }
+ 100% {
+   -webkit-transform: rotateY(0deg);
+   transform: rotateY(0deg);
+ }
+}
+
+/* This one animates the back card */
+@keyframes cardFlipBack {
+ 0% {
+   -moz-transform: rotateY(-180deg);
+   -ms-transform: rotateY(-180deg);
+   transform: rotateY(-180deg);
+ }
+ 22.5% {
+   -moz-transform: rotateY(-180deg);
+   -ms-transform: rotateY(-180deg);
+   transform: rotateY(-180deg);
+ }
+ 27.5% {
+   -moz-transform: rotateY(0deg);
+   -ms-transform: rotateY(0deg);
+   transform: rotateY(0deg);
+ }
+ 72.5% {
+   -moz-transform: rotateY(0deg);
+   -ms-transform: rotateY(0deg);
+   transform: rotateY(0deg);
+ }
+ 77.5% {
+   -moz-transform: rotateY(-180deg);
+   -ms-transform: rotateY(-180deg);
+   transform: rotateY(-180deg);
+ }
+ 100% {
+   -moz-transform: rotateY(-180deg);
+   -ms-transform: rotateY(-180deg);
+   transform: rotateY(-180deg);
+ }
+}
+
+/* This one animates the back card in webkit */
+@-webkit-keyframes cardFlipBack {
+ 0% {
+   -webkit-transform: rotateY(-180deg);
+   transform: rotateY(-180deg);
+ }
+ 22.5% {
+   -webkit-transform: rotateY(-180deg);
+   transform: rotateY(-180deg);
+ }
+ 27.5% {
+   -webkit-transform: rotateY(0deg);
+   transform: rotateY(0deg);
+ }
+ 72.5% {
+   -webkit-transform: rotateY(0deg);
+   transform: rotateY(0deg);
+ }
+ 77.5% {
+   -webkit-transform: rotateY(-180deg);
+   transform: rotateY(-180deg);
+ }
+ 100% {
+   -webkit-transform: rotateY(-180deg);
+   transform: rotateY(-180deg);
+ }
+}
+
+/* Hide back of card during swap */
+.front, .back {
+ -webkit-backface-visibility: hidden;
+ -moz-backface-visibility: hidden;
+ -ms-backface-visibility: hidden;
+ backface-visibility: hidden;
+ position: absolute;
+ top: 0;
+ left: 0;
+}
+
+/* Front card stacked above the back card */
+.front {
+ z-index: 2;
+}
+
+/* The back, initially hidden, card */
+.back {
+ -webkit-transform: rotateY(-180deg);
+ -moz-transform: rotateY(-180deg);
+ -ms-transform: rotateY(-180deg);
+ transform: rotateY(-180deg);
+}
+
