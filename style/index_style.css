@@ -13,6 +13,11 @@ body { margin: 0px; padding: 0px; overflow: hidden;}
 .thx_icon { width: 20px; height: 20px; filter: drop-shadow(3px 3px 3px black); }
 .thx_title { font-size: 12px; font-family: REM_Reg;}
 
+@media only screen and (max-width: 768px) {
+/*Mobile view*/
+.container { width: 600px; height: 1200px; display: block; object-fit: cover; position: relative; align-content: center; border: 0px; margin: 0px;}
+}
+
 @font-face {
 	font-family: REM_Reg;
 	src: url('../font/REM-Regular.ttf');
