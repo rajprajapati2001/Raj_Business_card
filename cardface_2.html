@@ -1,0 +1,148 @@
+<!--Link CSS File-->
+<link rel="stylesheet" href="style/face_style_2.css">
+<body class="cardface_2">
+
+<div class="face_card_2">
+<center>
+<table class="div_table_2">
+<tr>
+ <td>
+ <!--Details-->
+<div class="div_details">
+<table>
+<tr>
+ <td><img src="images/id_logos/user_id_social_media_icon.png" class="card_2_icons"/></td>
+ <td class="list_items">Prajapati Raj Pankaj</td>
+</tr>
+<tr>
+ <td><img src="images/id_logos/cake_object_logo_icon.png" class="card_2_icons"/></td>
+ <td class="list_items">14<sup>th</sup> February 2001</td>
+</tr>
+<tr>
+ <td><img src="images/id_logos/gender_equality_logo_icon.png" class="card_2_icons"/></td>
+ <td class="list_items">Male</td>
+</tr>
+<tr>
+ <td><img src="images/id_logos/blood_test_logo_icon.png" class="card_2_icons"/></td>
+ <td class="list_items">TBD (To Be Determined)</td>
+</tr>
+<tr>
+ <td><img src="images/id_logos/gmail_item_logo.png" class="card_2_icons"/></td>
+ <td class="list_items">rp5876907@gmail.com</td>
+ <!--<a href="mailto: rp5876907@gmail.com?subject = Feedback&body = Message"></a>-->
+</tr>
+</table>
+</div> 
+</td>
+
+ <td rowspan="2">
+ <!--Google Pay Details-->
+ <!--<div><img class="g_pay_img"/></div>-->
+<div style="width: 180px; height: 180px;">
+ <!--G PAY FLIP ENCODING-->
+ <div class="card">
+  <div class="flip-container">
+    <div class="flipper">
+      <div class="front">
+        <img class="img_style" id="my_qr_images" alt="image_1">
+      </div>
+      <div class="back">
+        <img class="img_style" src="images/id_logos/gpay_qr_code_image.png" alt="image_2">
+      </div>
+    </div>
+  </div>
+ </div>
+</div>
+
+ </td>
+</tr>
+
+<!--Google Payment Arrow-->
+<tr>
+ <td>
+
+<table>
+<tr>
+<td><img id="barcode_1" class="b_img_but_barcode" onclick="encode_fun()" src="images/scan_images/globalization_icon.png"/></td>
+<td><img id="barcode_2" class="a_img_but_barcode" onclick="web_fun()" src="images/scan_images/code_icon.png"/></td>
+<td>
+<div class="pay_button">
+  <table><tr>
+     <td><img src="images/id_logos/google_main_iconic_logo.png" width="20px" height="20px"/></td>
+     <td class="pay_font">Pay</td><td><img src="images/id_logos/next_arrow_500x500.png" width="20px" height="20px"/></td></tr></table>
+</div>  
+</td>
+</tr>
+</table>
+
+
+ </td>
+</tr>
+
+<tr>
+ <td colspan="2">
+<!--Barcode IMG--> 
+<div class="div_barcode"><center>
+<img id="ID_barcode" class="switch_barcode" src="images/scan_images/github_website_barcode.png"/>
+</center>
+</div>
+ </td>
+</tr>
+</table>
+</center>
+
+</div>
+
+</body>
+<script type="text/javascript">
+//QR CODE FLIP COMMAND
+var qr_codes = new Array(
+"images/qr_codes/ai_qr_codes_01.jpg",
+"images/qr_codes/ai_qr_codes_02.jpg",
+"images/qr_codes/ai_qr_codes_03.jpg",
+"images/qr_codes/ai_qr_codes_04.jpg",
+"images/qr_codes/ai_qr_codes_05.jpg",
+"images/qr_codes/ai_qr_codes_06.jpg",
+"images/qr_codes/ai_qr_codes_07.jpg",
+"images/qr_codes/ai_qr_codes_08.jpg",
+"images/qr_codes/ai_qr_codes_09.jpg",
+"images/qr_codes/ai_qr_codes_10.jpg",
+"images/qr_codes/ai_qr_codes_11.jpg",
+"images/qr_codes/ai_qr_codes_12.jpg",
+"images/qr_codes/ai_qr_codes_13.jpg",
+"images/qr_codes/ai_qr_codes_14.jpg",
+"images/qr_codes/ai_qr_codes_15.jpg",
+"images/qr_codes/ai_qr_codes_16.jpg",
+"images/qr_codes/ai_qr_codes_17.jpg",
+"images/qr_codes/ai_qr_codes_18.jpg",
+"images/qr_codes/ai_qr_codes_19.jpg",
+"images/qr_codes/ai_qr_codes_20.jpg",
+"images/qr_codes/ai_qr_codes_21.jpg",
+"images/qr_codes/ai_qr_codes_22.jpg",
+"images/qr_codes/ai_qr_codes_23.jpg",
+"images/qr_codes/ai_qr_codes_24.jpg",
+"images/qr_codes/ai_qr_codes_25.jpg",
+"images/qr_codes/ai_qr_codes_26.jpg",
+"images/qr_codes/ai_qr_codes_27.jpg",
+"images/qr_codes/ai_qr_codes_28.jpg",
+"images/qr_codes/ai_qr_codes_29.jpg",
+"images/qr_codes/ai_qr_codes_30.jpg");
+
+var random_qr_art = Math.floor(Math.random() * qr_codes.length);     
+document.getElementById("my_qr_images").src = qr_codes[random_qr_art];  
+
+//BARCODE FLIPPING IMG
+var barcode = document.querySelector('#ID_barcode');
+
+function encode_fun(){
+ barcode.src = 'images/scan_images/github_website_barcode.png';
+ document.getElementById('barcode_1').className = "b_img_but_barcode";
+ document.getElementById('barcode_2').className = "a_img_but_barcode";
+}
+function web_fun(){
+ barcode.src = 'images/scan_images/github_coding_barcode.png';
+ document.getElementById('barcode_1').className = "a_img_but_barcode";
+ document.getElementById('barcode_2').className = "b_img_but_barcode";
+}
+
+</script>
